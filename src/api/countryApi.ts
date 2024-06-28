@@ -1,7 +1,7 @@
 import axios from "axios";
 import { CountryType } from "../types/countryType";
 
-const apiUrl = import.meta.env.VITE_COUNTRY_URL;
+const apiUrl = "https://restcountries.com/v3.1/all";
 
 const axiosInstance = axios.create({
   baseURL: apiUrl,

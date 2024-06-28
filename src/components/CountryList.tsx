@@ -38,9 +38,11 @@ const CountryList = () => {
   };
 
   return (
-    <>
-      <h2>Favorite Countries</h2>
-      <div>
+    <div className="container mx-auto p-6">
+      <h2 className="text-2xl font-semibold text-center mt-12">
+        Favorite Countries
+      </h2>
+      <div className="selected-country-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
         {selectedCountries.map((country: CountryType) => {
           return (
             <CountryCard
@@ -51,8 +53,8 @@ const CountryList = () => {
           );
         })}
       </div>
-      <h1>Countries</h1>
-      <div>
+      <h1 className="text-3xl font-bold text-center mb-8">Countries</h1>
+      <div className="country-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {countryList.map((country: CountryType) => {
           return (
             <CountryCard
@@ -63,7 +65,7 @@ const CountryList = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

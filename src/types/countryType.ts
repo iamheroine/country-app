@@ -1,4 +1,4 @@
-export type Country = {
+export type CountryType = {
   name: {
     common: string;
     official: string;
@@ -43,10 +43,6 @@ export type Country = {
   landlocked: boolean;
   area: number;
   demonyms: {
-    eng: {
-      f: string;
-      m: string;
-    };
     [key: string]: {
       f: string;
       m: string;
@@ -68,7 +64,10 @@ export type Country = {
     png: string;
     svg: string;
   };
-  coatOfArms: Record<string, unknown>;
+  coatOfArms: {
+    png?: string;
+    svg?: string;
+  };
   startOfWeek: string;
   capitalInfo: {
     latlng: number[];

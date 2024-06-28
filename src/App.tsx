@@ -1,10 +1,12 @@
 import "./App.css";
-import { countryApi } from "./api/countryApi";
+import CountryList from "./components/CountryList";
 
 function App() {
-  countryApi();
-
-  return <></>;
+  return (
+    <>
+      <CountryList />
+    </>
+  );
 }
 
 export default App;

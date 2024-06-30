@@ -11,7 +11,6 @@ export async function countryApi(): Promise<CountryType[]> {
   try {
     const response = await axiosInstance.get(apiUrl);
     const data = response.data;
-    console.log(data);
     return data;
   } catch (error) {
     console.error("Country 정보 호출에 실패했습니다.", error);
